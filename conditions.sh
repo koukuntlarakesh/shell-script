@@ -11,4 +11,4 @@ else
 {
     echo "$number is less than 1000"
 }
-if
+fi
