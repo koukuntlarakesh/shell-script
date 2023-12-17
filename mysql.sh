@@ -12,16 +12,19 @@ else
 }
 fi
 validate() {
-if [ $? -ne 0 ]
+if [ $1 -ne 0 ]
 then
-    echo "ERROR:: Installing MySQL is failed"
+    echo "ERROR:: Installing $2 is failed"
     exit 1
 else
-    echo "Installing MySQL is SUCCESS"
+    echo "Installing $2 is SUCCESS"
 fi
 }
 
 
 yum install mysql -y
 
-validate $?
+validate $? "my sql"
+
+yum install git -y
+validate $? "my sql"
