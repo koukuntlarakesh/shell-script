@@ -20,7 +20,7 @@ then
 {
     echo "not installing"
 }
-echo
+else
 {
     echo "SUCCESS"
 }
