@@ -27,4 +27,4 @@ yum install mysql -y
 validate $? "my sql"
 
 yum install git -y
-validate $? "my sql"
+validate $? "git"
