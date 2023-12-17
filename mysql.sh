@@ -11,9 +11,7 @@ else
     echo "You are root user"
 }
 fi
-
-
-yum install mysql -y
+validate() {
 if [ $? -ne 0 ]
 then
     echo "ERROR:: Installing MySQL is failed"
@@ -21,15 +19,9 @@ then
 else
     echo "Installing MySQL is SUCCESS"
 fi
+}
 
-if [ $? -ne 0 ]
-then 
-{
-    echo "not installing"
-   
-}
-else
-{
-    echo "SUCCESS"
-}
-fi
+
+yum install mysql -y
+
+validate $?
