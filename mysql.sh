@@ -19,6 +19,7 @@ if [ $? -ne 0 ]
 then 
 {
     echo "not installing"
+    exit 1
 }
 else
 {
