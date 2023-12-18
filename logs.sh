@@ -25,6 +25,7 @@ then
     echo "$R ERROR::$E Installing $2 is failed"
     exit 1
 else
+
     echo "Installing $2 is $G SUCCESS $E"
 fi
 }
