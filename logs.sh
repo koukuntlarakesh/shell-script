@@ -6,7 +6,7 @@ R="\e[31m"
 G="\e[32m"
 E="\e[0m"
 
-LOGFILE="/tmp/$0.log"
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 echo "Script started at $TIMESTAMP" &>> $LOGFILE
 
@@ -14,6 +14,7 @@ if  [ $ID -ne 0 ]
 then 
 {
     echo "Error please run with root user"
+    exit 1
 }
 else
 {
@@ -34,7 +35,7 @@ fi
 
 yum install mysql -y
 
-validate $? "my sql"
+validate $? "my sqll"
 
 yum install git -y
 validate $? "git"
