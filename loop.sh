@@ -4,7 +4,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-TIMESTAMP=$(date +%F-%H-%M)
+TIMESTAMP=$(date +%F)
 LOGFILE="/tmp/$0-$TIMESTAMP.log" 
 echo -e " $G LOGS BEGAN FROM $TIMESTAMP $N" &>> $LOGFILE
 if [ $ID -ne 0 ]
