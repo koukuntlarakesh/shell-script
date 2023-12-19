@@ -7,11 +7,11 @@ N="/e[0m"
 if [ $ID -ne 0 ]
 then
 {
-    echo "$R ERROR....$N RUN WITH ROOT USER"
+    echo -e "$R ERROR....$N RUN WITH ROOT USER"
 }
 else
 {
-    echo "$G YOU ARE ROOT USER $N"
+    echo -e "$G YOU ARE ROOT USER $N"
 }
 fi
 VALIDATE ()
@@ -19,12 +19,13 @@ VALIDATE ()
     if [ $1 -ne 0 ]
     then
     { 
-        echo "$2 ..... $R ERROR....$N "
+        echo -e "$2 ..... $R ERROR....$N "
     }
     else
     {
-        echo "$2 installation $G Success.....$N"
+        echo -e "$2 installation $G Success.....$N"
     }
+    fi
 }
 
 for package in $@
@@ -40,8 +41,8 @@ do
     }
     else
     {
-       echo "package is already installed..... $Y SKIPPING $N"
+       echo -e "package is already installed..... $Y SKIPPING $N"
     }
-
+    fi
     
 }
