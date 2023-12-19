@@ -7,7 +7,7 @@ N="/e[0m"
 if [ $ID -ne 0 ]
 then
 {
-    echo -e "$R ERROR....$N RUN WITH ROOT USER"
+    echo -e " $R ERROR.... $N RUN WITH ROOT USER"
 }
 else
 {
@@ -46,3 +46,4 @@ do
     fi
     
 }
+done
