@@ -11,7 +11,7 @@ then
 }
 else
 {
-    echo -e "$G YOU ARE ROOT USER $N"
+    echo -e " $G YOU ARE ROOT USER $N "
 }
 fi
 VALIDATE ()
@@ -19,11 +19,11 @@ VALIDATE ()
     if [ $1 -ne 0 ]
     then
     { 
-        echo -e "$2 ..... $R ERROR....$N "
+        echo -e " $2 ..... $R ERROR....$N "
     }
     else
     {
-        echo -e "$2 installation $G Success.....$N"
+        echo -e " $2 installation $G Success.....$N "
     }
     fi
 }
@@ -41,7 +41,7 @@ do
     }
     else
     {
-       echo -e "package is already installed..... $Y SKIPPING $N"
+       echo -e "package is already installed..... $Y SKIPPING $N "
     }
     fi
     
