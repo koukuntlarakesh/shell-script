@@ -32,9 +32,9 @@ fi
 }
 
 
-yum install mysql -y
+yum install mysql -y &>> $LOGFILE
 
 validate $? "my sqll"
 
-yum install git -y
+yum install git -y &>> $LOGFILE
 validate $? "git"
