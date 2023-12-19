@@ -1,7 +1,7 @@
 #!/bin/bash
 ID=$(id -u) 
 
-TIMESTAMP=$(date +%F-%H-%M-%S)
+TIMESTAMP=$(date +%F)
 R="\e[31m"
 G="\e[32m"
 E="\e[0m"
