@@ -4,6 +4,9 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+TIMESTAMP=$(date +%F-%H-%M)
+LOGFILE="/tmp/$0-$TIMESTAMP.log" 
+echo -e " $G LOGS BEGAN FROM $TIMESTAMP $N" &>> $LOGFILE
 if [ $ID -ne 0 ]
 then
 {
@@ -31,11 +34,11 @@ VALIDATE ()
 for package in $@
 do
 {
-    yum list installed $package
+    yum list installed $package &>> $LOGFILE
     if [ $? -ne 0 ] 
     then
     {
-      yum install -y $package
+      yum install -y $package &>> $LOGFILE
       VALIDATE  $? $package
       # Checking the installation of each packages. If any fails, it will print an error message and exit with a non-
     }
