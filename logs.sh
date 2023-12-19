@@ -6,7 +6,7 @@ R="\e[31m"
 G="\e[32m"
 E="\e[0m"
 
-LOGFILE="/tmp/$0-$TIMESTAMP.log"
+LOGFILE="/tmp/$0.log"
 
 echo -e "Script started at $TIMESTAMP" &>> $LOGFILE
 
