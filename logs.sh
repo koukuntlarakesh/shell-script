@@ -7,7 +7,8 @@ G="\e[32m"
 E="\e[0m"
 
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
-echo "Script started at $TIMESTAMP" &>> $LOGFILE
+
+echo -e "Script started at $TIMESTAMP" &>> $LOGFILE
 
 if  [ $ID -ne 0 ] 
 then 
