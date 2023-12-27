@@ -6,11 +6,12 @@ Y="\e[33m"
 N="\e[0m"
 TIMESTAMP=$(date +%F)
 LOGFILE="/tmp/$0-$TIMESTAMP.log" 
-echo -e " $G LOGS BEGAN FROM $TIMESTAMP $N" &>> $LOGFILE
+echo -e " $G LOGS BEGAN FROM $TIMESTAMP $N " &>> $LOGFILE
 if [ $ID -ne 0 ]
 then
 {
     echo -e " $R ERROR.... $N RUN WITH ROOT USER"
+    EXIT 1
 }
 else
 {
@@ -23,6 +24,7 @@ VALIDATE ()
     then
     { 
         echo -e " $2 ..... $R ERROR....$N "
+        EXIT 1
     }
     else
     {
