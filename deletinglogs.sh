@@ -7,10 +7,11 @@ Y="\e[33m"
 N="\e[0m"
 
 
-if [ ! -d "$DIRECTORY"]
+if [ ! -d "$SOURCE_DIRE"]
 then
    
     echo -e "$R Source Directory does not exit $N"
+    EXIT 1
 else
    {
     echo -e "$G Source exits $N"
