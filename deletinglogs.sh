@@ -10,14 +10,14 @@ N="\e[0m"
 if [ ! -d "$DIRECTORY"]
 then
    
-    echo -e "$R Source Directory does not exit "
+    echo -e "$R Source Directory does not exit $N"
 else
    {
-    echo -e "$G Source exits"
+    echo -e "$G Source exits $N"
    }
 fi 
 
-FILES_TO_DELETE=$(find . -type f -mtime +14 -name "*.log")
+FILES_TO_DELETE=$(find $SOURCE_DIRE -type f -mtime +14 -name "*.log")
 
 while IFS= read r line
 do
