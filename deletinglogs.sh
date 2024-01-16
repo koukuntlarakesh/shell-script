@@ -16,3 +16,12 @@ else
     echo -e "$G Source exits"
    }
 fi 
+
+FILES_TO_DELETE=$(find . -type f -mtime +14 -name "*.log")
+
+while IFS= read r line
+do
+{
+    echo "Deleting files :$line"
+}
+done <<< $FILES_TO_DELETE
