@@ -1,19 +1,14 @@
 #!/bin/bash
 
-SOURCE="/tmp/shellscripts-log"
+SOURCE_DIRE=/tmp/shell-scripts-logs
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+DIRECTORY=$(SOURCE_DIRE)
 
-if [ ! -d "$SOURCE" ]
+if [ ! -d "$DIRECTORY"]
 then
-{
-    echo -e "$SOURCE is not exits"
-}
+   
+    echo -e "$R Source Directory does not exit "
 fi
-
-FILES_TO_DELETE=$(find $SOURCE -type f -mtime +14 -name "*.log")
-
-while IFS= read -r line
-do 
-   echo "deleating files"
-   rm -rf $line
-done <<< $FILES_TO_DELETE
-echo "Deleting completed!"
