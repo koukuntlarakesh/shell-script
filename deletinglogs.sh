@@ -7,7 +7,7 @@ Y="\e[33m"
 N="\e[0m"
 
 
-if [ ! -d "$SOURCE_DIRE"]
+if [ ! -d "$SOURCE_DIRE" ]
 then
    
     echo -e "$R Source Directory does not exit $N"
