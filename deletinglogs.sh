@@ -11,4 +11,8 @@ if [ ! -d "$DIRECTORY"]
 then
    
     echo -e "$R Source Directory does not exit "
-fi
+else
+   {
+    echo -e "$G Source exits"
+   }
+then  
