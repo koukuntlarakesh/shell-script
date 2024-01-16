@@ -15,4 +15,4 @@ else
    {
     echo -e "$G Source exits"
    }
-then  
+fi 
