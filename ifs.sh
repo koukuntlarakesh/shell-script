@@ -9,10 +9,10 @@ Y="\e[33m"
 N="\e[0m"
 
 
-if [ ! -d $SOURCE_DIRE ]
+if [ ! -f $SOURCE_DIRE ]
 then
    
-    echo -e "$R Source Directory does not exit $N"
+    echo -e "$R Source file does not exit $N"
     exit 1
 else
    {
