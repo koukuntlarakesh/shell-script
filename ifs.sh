@@ -26,4 +26,5 @@ while IFS=":" read -r username password user_id group_id user_fullname home_dir 
 do
 echo "username:$username"
 echo "password:$password"
-done <<< $SOURCE_DIRE
+
+done < $SOURCE_DIRE
