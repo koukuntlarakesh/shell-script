@@ -22,3 +22,12 @@ while getopts "n:w:h" opt; do
    
     esac
 done
+
+if [ -z "$NAME" ] || [ -Z "$wishes" ]; then
+
+echo "ERROR: Both -n and -w are mandatory options."
+USAGE
+exit 1
+fi
+
+echo "Hello $NAME ,$WISHES. I have been learning Shell Scripting."
