@@ -1,7 +1,8 @@
 #!/bin/bash
 
 NAME=""
-WISHES=""
+WISHES="GOOD MORNING" #ITS A DEFAULT IF USER WANT TO CHANGE HE CAN DOO
+
 
 USAGE(){
     echo "Usage:: $(basename $0) -n <name> -w <wishes>"
@@ -23,8 +24,8 @@ while getopts "n:w:h" opt; do
     esac
 done
 
-if [ -z "$NAME" ] || [ -Z "$wishes" ]; then
-
+#if [ -z "$NAME" ] || [ -Z "$wishes" ]; then
+if [ -z "$NAME" ]; then
 echo "ERROR: Both -n and -w are mandatory options."
 USAGE
 exit 1
